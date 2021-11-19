@@ -1,0 +1,200 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<nav class="navbar navbar-light bg-dark">
+    <div class="container-fluid">
+        <h1 style="color: aliceblue;">Evaluation Form</h1>
+
+    </div>
+
+</nav>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                    <div class="card-header">
+                        <h2 class="mb-0">Product Information</h2>
+                    </div> 
+                <div class="card-body p-2">
+                    <form class="myform" asp-action="AddFeedback" method="post">
+
+                        <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="exampleAccount">Category</label>
+                                    <select class="form-control" id="exampleAccount"></select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="exampleAccount">Product</label>
+                                    <select class="form-control" id="exampleAccount"></select>
+                                </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <p class="required">Overall how satisfied are with the product/service? </p>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" checked> Very Satisfied
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio">Satisfied
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio">Neutral
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio">Unsatisfied
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio">Very Unsatisfied
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio">N/A
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <p class="required">Which of the following category have you purchased in the last few months.<br />Please check all that apply</p>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-inline" for="defaultCheck1">
+                                        Air Conditioner
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-inline" for="defaultCheck1">
+                                        TV
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-inline" for="defaultCheck1">
+                                        Mobile
+                                    </label>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-8 pb-3">
+                                <label for="exampleMessage">What do you like about the the Product/Service.</label>
+                                <textarea class="form-control" id="complexExampleMessage" rows="3"></textarea>
+                                <small class="text-muted">Add comments.</small>
+                            </div>
+
+                            <div class="card-header">
+                                <h2 class="mb-0">User Information</h2>
+                            </div>
+
+
+
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- form complex example 
+<div class="card card-outline-secondary mt-5">
+    <div class="card-header">
+        <h3 class="mb-0">Product Information</h3>
+    </div>
+    <div class="card-body p-2">
+        <div class="form-group row">
+            <div class="col-md-">
+                <label for="exampleAccount">Category</label>
+                <select class="form-control" id="exampleAccount"></select>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-sm-3 pb-3">
+                <label for="exampleAccount">Category</label>
+                <select class="form-control" id="exampleAccount"></select>
+            </div>
+
+            <div class="col-sm-3 pb-3">
+                <label for="exampleAccount">Product</label>
+                <select class="form-control" id="exampleAccount"></select>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <p class="required">Overall how satisfied are with the product/service? </p>
+                </div>
+                <div class="col-md-6">
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" checked> Very Satisfied
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio">Satisfied
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio">Neutral
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio">Unsatisfied
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio">Very Unsatisfied
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio">N/A
+                    </label>
+                </div>
+
+                Check box
+
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <p class="required">Which of the following category have you purchased in the last few months.<br />Please check all that apply</p>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-inline" for="defaultCheck1">
+                            Air Conditioner
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-inline" for="defaultCheck1">
+                            TV
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-inline" for="defaultCheck1">
+                            Mobile
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-md-8 pb-3">
+                    <label for="exampleMessage">What do you like about the the Product/Service.</label>
+                    <textarea class="form-control" id="complexExampleMessage" rows="3"></textarea>
+                    <small class="text-muted">Add comments.</small>
+                </div>
+
+
+
+
+
+
+            </div>
+                
+
+        </div>
+    </div>
+</div> 
+</div>-->
