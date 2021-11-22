@@ -37,8 +37,10 @@ namespace CustomerFeedBack.Repository
             parameters.Add("Region", customerFeedback.Region);
             parameters.Add("PostalCode", customerFeedback.PostalCode);
             parameters.Add("Country", customerFeedback.Country);
+            parameters.Add("MailId", customerFeedback.MailId);
             parameters.Add("ProductId", customerFeedback.ProductId);
             parameters.Add("Rating", customerFeedback.Rating);
+            parameters.Add("CategoryPurchased", customerFeedback.CategoryPurchased);
             parameters.Add("Comments", customerFeedback.Comments);
             parameters.Add("Reason", customerFeedback.Reason);
             parameters.Add("FileUpload", customerFeedback.FileUpload);

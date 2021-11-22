@@ -34,9 +34,13 @@ namespace CustomerFeedBack.ViewModel
         public string Country { get; set; }
         //[StringLength(100)]
 
+        public string MailId { get; set; }
+
         public int ProductId { get; set; }
         public int Rating { get; set; }
-       
+
+        public int CategoryPurchased { get; set; }
+
         //[Required]
         //[StringLength(500)]
         public string Comments { get; set; }

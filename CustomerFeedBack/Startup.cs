@@ -36,6 +36,14 @@ namespace CustomerFeedBack
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CustomerFeedBack", Version = "v1" });
             });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+            });
+
             services.AddDbContext<CustomerFeedbackContext>(options => options.UseSqlServer(
            Configuration.GetConnectionString("DefaultConnection")));
 
@@ -57,6 +65,7 @@ namespace CustomerFeedBack
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 
